@@ -1,0 +1,46 @@
+<template>
+    <div class="container">
+        <template if:true={loading}>
+            <lightning-spinner class="slds-align_absolute-center" variant="brand" alternative-text="Loading" size="small"></lightning-spinner>
+        </template>
+
+        <template if:false={loading}>
+            <div class="selected-address-section">
+                <h2>Current Address</h2>
+                <div class="address-box">
+                    <input type="radio" id="current-address" name="current-address" value="current-address" checked disabled>
+                    <label for="current-address" class="address-label">
+                        <div class="address">
+                            <p>{selectedAddress.address}</p>
+                            <p>{selectedAddress.city}, {selectedAddress.state}</p>
+                            <p>{selectedAddress.zip} {selectedAddress.country}</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="change-address-section">
+                <h2>Change Address</h2>
+                <input type="text" class="address-input" placeholder="Address Search" name="address-filter">
+                <div class="address-option-modal">
+                    <template for:each={filteredAddresses} for:item="address">
+                        <div key={address.Id} class="address-option">
+                            <!-- Move onclick to the input and make sure name attributes are the same -->
+                            <button class="radio-button" 
+                                id={address.accountId} 
+                                name="address-group" 
+                                onclick={handleAddressOptionClick}
+                                data-value={address.accountId}></button>
+                            <label for={address.id} class="address-label">
+                                <div class="address">
+                                    <p>{address.address}</p>
+                                    <p>{address.city}, {address.state}</p>
+                                    <p>{address.zip} {address.country}</p>
+                                </div>
+                            </label>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
