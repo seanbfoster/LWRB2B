@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    /*font-family: Arial, sans-serif; /* Modern font */
 }
 
 .selected-address-section, .change-address-section{
@@ -17,7 +16,7 @@
     margin: 10px 0;
     border: 1px solid #76716b;
     padding: 10px;
-    border-radius: 5px; /* rounded corners for modern look */
+    border-radius: 5px;
     width: 100%;
 }
 
@@ -33,8 +32,7 @@
 .address-option-modal{
     overflow-y: auto; /* scrollable */
     overflow-x: hidden;
-    max-height: 300px; /* adjust as needed */
-    /*padding: 10px 0;*/
+    max-height: 300px;
     width: 100%;
 }
 
@@ -43,26 +41,26 @@
 }
 
 input[type="radio"]{
-    accent-color: blue; /* modern radio button color */
+    accent-color: blue;
 }
 
 .radio-button {
     background-color: white;
     border: 1px solid #76716b;
-    border-radius: 50%; /* Circular shape */
-    width: 15px; /* Size of the button */
+    border-radius: 50%;
+    width: 15px;
     height: 15px;
     margin-right: 10px;
-    cursor: pointer; /* Hand cursor on hover */
+    cursor: pointer;
 }
 
 .address-input {
-    width: 100%; /* Same width as address option */
-    padding: 10px; /* Padding for better text visibility */
-    margin: 10px 0; /* Margin for spacing */
-    border: 1px solid #76716b; /* Border to match address option */
-    border-radius: 5px; /* Rounded corners */
-    font-family: Arial, sans-serif; /* Consistent font */
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #76716b;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
 }
 
 h2{
