@@ -11,6 +11,9 @@
     <targetConfigs>
         <targetConfig targets="lightningCommunity__Default">
             <property type="String" label="Checkout Details" name="checkoutDetails" default="{!Checkout.Details}"/>
+            <property type="String" label="Account Name API Name" name="accountNameFieldApiName" default="name"/>
+            <property type="String" label="Additional Field API Names (example: 'field1__c, field2__c')" name="fieldApiNames"/>
+            <property type="Boolean" label="Show custom field labels?" name="showLabels" default="false"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
